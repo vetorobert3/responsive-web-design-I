@@ -1,4 +1,4 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+	/* Use your own code or past solution for Great Idea Web Page CSS here! */
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -69,15 +69,19 @@ h1, h2, h3, h4, h5 {
 
 body {
 	text-align: center;
-	margin: 0% 15%;
+	margin: 0% 10%;
 }
 
 .navigation {
-	margin: 0 auto;
+	padding: 2%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: nowrap;
 	text-align: center;
 }
 
-.navigation a {
+.tag a {
 	text-decoration: none;
 	color: #b9bdc4;
 	padding: 3%;
@@ -85,26 +89,6 @@ body {
 
 .logo {
 	padding: 2%;
-}
-
-/*At max-width 800px for nav*/
-@media (max-width: 800px) {
-	.navigation {
-		display: flex;
-		flex-wrap: wrap-reverse;
-		justify-content: center;
-		padding: 2%;
-		align-items: center;
-	}
-	.navigation a {
-		display:flex;
-		flex-wrap: nowrap;
-		padding: 3%;
-	}
-
-	.head .circle {
-		visibility: hidden;
-	}
 }
 
 h1 {
@@ -182,4 +166,130 @@ address h3{
 
 footer {
 	padding: 45px;
+}
+
+/*At max-width 800px*/
+@media (max-width: 800px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+	.navigation {
+		display: flex;
+		flex-wrap: wrap-reverse;
+		justify-content: center;
+		padding: 2%;
+		align-items: center;
+	}
+	.navigation .tag {
+		display:flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+
+  .head {
+    padding: 10% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .head div h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+  }
+
+	.head .circle {
+		visibility: hidden;
+	}
+
+  hr {
+    width: 100%;
+  }
+
+  .info {
+    padding: 5% 2%;
+  }
+}
+
+/* At max-width at 500px */
+@media (max-width: 500px) {
+  .navigation {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+	.tag {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding: 1%%;
+	}
+
+	.tag a {
+		border-top: 1px solid #6e6e6e;
+		border-spacing: 10px;
+	}
+
+	.tag .bline {
+		border-bottom: 1px solid #6e6e6e;
+	}
+
+	.logo {
+		padding: 10% 0% 5% 0%;
+	}
+
+	.head {
+
+	}
+
+	.info {
+		padding: 10% 0%;
+		display:flex;
+		flex-direction: column;
+	}
+
+	.info div {
+		padding: 5% 0% 5% 0%;
+	}
+
+	.features {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.about {
+		width:100%;
+	}
+
+	.bottom {
+		display: flex;
+		flex-direction: column;
+		padding: 2% 0%;
+	}
+
+	.services {
+		width: 100%;
+		padding: 8% 0% 8% 0%;
+	}
+
+	.product {
+		width: 100%;
+		padding: 8% 0% 8% 0%;
+	}
+
+	.vision {
+		width: 100%;
+		padding: 8% 0% 8% 0%;
+	}
+
 }
