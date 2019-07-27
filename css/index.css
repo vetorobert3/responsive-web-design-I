@@ -67,229 +67,198 @@ h1, h2, h3, h4, h5 {
 
 /* Your code starts here! */
 
+/* ----------Desktop View--------- */
+
 body {
 	text-align: center;
 	margin: 0% 10%;
-}
-
-.navigation {
-	padding: 2%;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	flex-wrap: nowrap;
-	text-align: center;
-}
-
-.tag a {
-	text-decoration: none;
-	color: #b9bdc4;
-	padding: 3%;
-}
-
-.logo {
-	padding: 2%;
-}
-
-h1 {
-	font-size: 80px;
-}
-
-.head {
-	text-align: center;
-	display: inline-block;
-}
-
-section {
-	padding: 65px 30px 50px 0px;
-}
-
-.head div {
-	width: 49.5%;
-	display: inline-block;
-}
-
-.head div button {
-	text-decoration: none;
-	background-color: white;
-	font-size: 16px;
-	padding:;
-}
-
-.head img {
-	width: 49.5%;
-	display: inline-block;
-	padding: 0px 0px 5px 40px;
+  padding: 3%;
 }
 
 hr {
-	border: 1px solid black;
+  height: 3px;
+  color: black;
+  background-color: black;
 }
 
-.features {
-	text-align: left;
-	width: 49.5%;
-	display: inline-block;
+/* -----Nav Bar----- */
+.navigation {
+  display: flex;
+  flex-direction: row;
+  /*might have to fix this*/
+  justify-content: space-between;
 }
 
-.about {
-	text-align: left;
-	width: 49.5%;
-	display: inline-block;
+.tag {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+a {
+  color: #a3a3a3;
+  text-decoration: none;
+}
+
+/* -----head-----*/
+.head {
+  padding: 7% 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.innovation {
+  width: 49%;
+}
+
+h1 {
+  font-size: 80px;
+  display: flex;
+  flex-content: column;
+  justify-content: center;
+}
+
+/* -----info----- */
+.info {
+  padding: 4% 0%;
+  display: flex;
+  text-align: left;
+}
+
+.middle-img {
+  width: 100%;
+  height: auto;
+}
+
+/* -----bottom----- */
+.bottom {
+  padding:4% 0%;
+  text-align: left;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .services {
-	text-align: left;
-	display: inline-block;
-	width: 32.5%;
+  width: 32%;
 }
 
 .product {
-	text-align: left;
-	display: inline-block;
-	width: 32.5%;
+  width: 32%;
 }
 
 .vision {
-	text-align: left;
-	display: inline-block;
-	width: 32.5%;
+  width: 32%;
 }
 
+/* -----address----- */
 address {
-	text-align: left;
+  padding: 4% 0%;
+  text-align: left;
 }
 
-address h3{
-	padding: 45px 0px 0px 0px;
+/* -----footer-----*/
+footer p {
+  padding: 0% 0% 4% 0%;
 }
 
-footer {
-	padding: 45px;
-}
-
-/*At max-width 800px*/
+/* ----------max-width at 800px---------- */
 @media (max-width: 800px) {
-  body {
-    display: flex;
-    flex-direction: column;
-  }
+  /* -----body-----*/
+/*   body {
+    text-align: center;
+  } */
 
-	.navigation {
-		display: flex;
-		flex-wrap: wrap-reverse;
-		justify-content: center;
-		padding: 2%;
-		align-items: center;
-	}
-	.navigation .tag {
-		display:flex;
-		flex-wrap: nowrap;
-		justify-content: space-between;
-	}
-
-  .head {
-    padding: 10% 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .head div h1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  button {
-    width: 150px;
-    display: flex;
-    justify-content: center;
-  }
-
-	.head .circle {
-		visibility: hidden;
-	}
-
-  hr {
-    width: 100%;
-  }
-
-  .info {
-    padding: 5% 2%;
-  }
-}
-
-/* At max-width at 500px */
-@media (max-width: 500px) {
+  /* -----nav----- */
   .navigation {
     display: flex;
     flex-direction: column-reverse;
   }
 
-	.tag {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		padding: 1%%;
-	}
+  .tag a {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
 
-	.tag a {
-		border-top: 1px solid #6e6e6e;
-		border-spacing: 10px;
-	}
+  .logo {
+    padding: 0% 0% 5% 0%;
+  }
 
-	.tag .bline {
-		border-bottom: 1px solid #6e6e6e;
-	}
+  /* -----head----- */
+  .circle {
+    display: none;
+  }
+}
 
-	.logo {
-		padding: 10% 0% 5% 0%;
-	}
+/* ----------max-width at 500px---------- */
+@media (max-width: 500px) {
+  /* -----nav----- */
+  .navigation {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
-	.head {
+  .tag {
+    display: flex;
+    flex-direction: column;
+  }
 
-	}
+  .tag a {
+    border-top: 1px solid #6e6e6e;
+    padding: 5%;
+  }
 
-	.info {
-		padding: 10% 0%;
-		display:flex;
-		flex-direction: column;
-	}
+  .tag .bline {
+    border-bottom: 1px solid #6e6e6e;
+  }
 
-	.info div {
-		padding: 5% 0% 5% 0%;
-	}
+  /* -----head----- */
+  .h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-	.features {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-	}
+  /* -----info----- */
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
 
-	.about {
-		width:100%;
-	}
+  .features {
+    padding: 8% 0%;
+  }
 
-	.bottom {
-		display: flex;
-		flex-direction: column;
-		padding: 2% 0%;
-	}
+  .about {
+    padding: 4% 0% 10% 0%;
+  }
 
-	.services {
-		width: 100%;
-		padding: 8% 0% 8% 0%;
-	}
+  /* -----bottom----- */
+  .bottom {
+    padding: 8% 0%;
+    display: flex;
+    flex-direction: column;
+  }
 
-	.product {
-		width: 100%;
-		padding: 8% 0% 8% 0%;
-	}
+  .services {
+    width: 100%;
+    padding: 0% 0% 20% 0%;
+  }
 
-	.vision {
-		width: 100%;
-		padding: 8% 0% 8% 0%;
-	}
+  .product {
+    width: 100%;
+    padding: 0% 0% 20% 0%;
+  }
 
+  .vision {
+    width: 100%;
+  }
+
+  /* -----footer----- */
+  footer {
+    padding: 5% 0%;
+  }
 }
